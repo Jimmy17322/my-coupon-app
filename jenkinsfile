@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // 'node-20'은 Jenkins Global Tool Configuration에서 설정한 이름과 일치해야 합니다.
-        NODEJS_HOME = tool 'nodejs'
+        NODEJS_HOME = tool 'Nodejs'
         PATH = "${NODEJS_HOME}/bin:${env.PATH}"
         SLACK_CHANNEL = '#api-test-notifications'
     }
