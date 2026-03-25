@@ -46,7 +46,7 @@ pipeline {
         
         success {
             slackSend(
-                channel: "${SLACK_CHANNEL}",
+               // channel: "${SLACK_CHANNEL}",
                 color: 'good',
                 message: "✅ 빌드 성공! [${env.JOB_NAME} #${env.BUILD_NUMBER}]\n결과: ${env.BUILD_URL}artifact/results/api-report.html"
             )
