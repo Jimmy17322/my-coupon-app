@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // 'node-20'은 Jenkins Global Tool Configuration에서 설정한 이름과 일치해야 합니다.
-        NODEJS_HOME = tool 'node-20'
+        NODEJS_HOME = tool 'nodejs'
         PATH = "${NODEJS_HOME}/bin:${env.PATH}"
         SLACK_CHANNEL = '#api-test-notifications'
     }
@@ -30,7 +30,7 @@ pipeline {
         stage('3. 테스트 실행') {
             steps {
                 echo '>>> Newman 테스트 시작...'
-                sh 'newman run test.json -e env.json -r htmlextra --reporter-htmlextra-export results/api-report.html'
+                sh 'newman run collcetion.json -e env.json -r htmlextra --reporter-htmlextra-export results/api-report.html'
             }
         }
     }
