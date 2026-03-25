@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+   agent any
 
     environment {
         // Node.js 도구 이름 (젠킨스 설정에서 지정한 이름과 같아야 합니다)
